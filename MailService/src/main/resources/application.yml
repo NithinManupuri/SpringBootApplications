@@ -1,0 +1,12 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    password: klmc uohr hmln pdcs
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    username: msainithin_ece190491@mgit.ac.in
