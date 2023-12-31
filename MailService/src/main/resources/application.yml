@@ -1,7 +1,7 @@
 spring:
   mail:
     host: smtp.gmail.com
-    password: klmc uohr hmln pdcs
+    password: //generate the app pasword
     port: 587
     properties:
       mail:
