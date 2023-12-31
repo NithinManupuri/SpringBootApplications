@@ -5,7 +5,6 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Data     
-
 public class User {
 
 	@NotBlank(message="Name should be reuired")
