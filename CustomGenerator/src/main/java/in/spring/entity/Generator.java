@@ -22,23 +22,29 @@ public class Generator implements IdentifierGenerator  {
 		try(Statement st=con.createStatement()){
 			ResultSet rs=st.executeQuery("select id from User");
 			
-		if(rs.next()) {
-			suffix=rs.getInt("id")+1;
-			st.executeUpdate("update User set id="+suffix);
-		}else {
-			st.executeUpdate("insert into User(id) values(" +suffix+ ")");
-		}
+			if(rs.next()) {
+				suffix=rs.getInt("id")+1;
+				st.executeUpdate("update User set id="+suffix);
+			}else {
+				st.executeUpdate("insert into User(id) values(" +suffix+ ")");
+			}
+				
+			}
 			
+			
+			}catch(Exception e) {
+				e.printStackTrace();
+				
+			}
+			return  prefix+suffix;
 		}
 		
 		
-		}catch(Exception e) {
-			e.printStackTrace();
-			
-		}
-		return  prefix+suffix;
+		
+		
+
 	}
-	
+			
 	
 	
 	
