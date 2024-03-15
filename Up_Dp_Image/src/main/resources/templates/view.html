@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Employee List</title>
+</head>
+<body>
+
+<h2>Employee List</h2>
+
+<table class="table table-bordered table-stripped">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Image</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Iterate over the list of employees -->
+    <tr th:each="employee : ${emp}">
+        <td th:text="${employee.id}"></td>
+        <td th:text="${employee.name}"></td>
+        <td>
+            <!-- Access the corresponding image from the 'images' list using the 'empIndex' -->
+            <img th:src="'data:image/jpeg;base64,' + ${images.get(employee.id)}" style="max-width: 100px; max-height: 100px;"/>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
