@@ -26,7 +26,7 @@ public class AppController {
 		
 	}
 	
-	@GetMapping("/tickets")
+	@PostMapping("/tickets")
 	public Collection<Ticket> allTickets() {
 		Collection<Ticket> c=service.getAllTickets();
 		return c;
